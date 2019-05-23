@@ -7,19 +7,21 @@ module.exports = {
     "prettier/@typescript-eslint",
     "prettier/react",
   ],
-  plugins: ["react"],
+  plugins: ["@typescript-eslint", "prettier", "react", "react-hooks"],
   settings: {
     react: {
       pragma: "React",
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   rules: {
-    ...require("./lib/rules")
-  }
+    ...require("./lib/rules"),
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+  },
 };
