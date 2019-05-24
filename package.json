@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config-lightbase",
-  "version": "0.1.2",
+  "name": "@lightbase/eslint-config-lightbase",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -26,6 +26,10 @@
     "eslint": "5.16.0",
     "prettier": "1.17.1",
     "typescript": "3.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lightbasenl/eslint-config-lightbase.git"
   },
   "files": [
     "README.md",
