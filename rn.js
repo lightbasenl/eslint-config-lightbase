@@ -1,14 +1,14 @@
-{
-  "extends": ["@react-native-community", "plugin:prettier/recommended"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    }
+module.exports = {
+  extends: ["@react-native-community", "plugin:prettier/recommended"],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  "overrides": [
+  overrides: [
     {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
+      files: ["*.ts", "*.tsx"],
+      rules: {
         ...require("./lib/rules"),
         "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/explicit-member-accessibility": "off",
@@ -25,18 +25,18 @@
             ignoreRestSiblings: false,
           },
         ],
-      }
-    }
+      },
+    },
   ],
-  "rules": {
-    "default-case": ["warn", { "commentPattern": "^no default$" }],
+  rules: {
+    "default-case": ["warn", { commentPattern: "^no default$" }],
     "no-nested-ternary": "warn",
     "no-unneeded-ternary": "warn",
     "no-useless-return": "warn",
     "prefer-destructuring": "warn",
     "react/no-unescaped-entities": "off",
-    "react/jsx-curly-brace-presence": ["error", { "props": "never", "children": "never" }],
+    "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never" }],
     "react/no-array-index-key": "warn",
-    "react/no-unused-state": "error"
-  }
-}
+    "react/no-unused-state": "error",
+  },
+};
