@@ -28,7 +28,7 @@ Prettier
 
 ```js
 // .prettierrc.js
-module.exports = require("eslint-config-lightbase/prettierrc");
+module.exports = require("@lightbase/eslint-config-lightbase/prettierrc");
 ```
 
 #### Prettier default config
