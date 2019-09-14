@@ -11,7 +11,7 @@ module.exports = {
       rules: {
         ...require("./lib/rules"),
         "react-native/no-inline-styles": "off",
-        "curly": "warn",
+        curly: "warn",
         "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/explicit-member-accessibility": "off",
         "@typescript-eslint/indent": "off",
@@ -40,6 +40,7 @@ module.exports = {
     "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never" }],
     "react/no-array-index-key": "warn",
     "react/no-unused-state": "error",
-    "no-catch-shadow": "off"
+    "object-shorthand": ["warn", "always"],
+    "no-catch-shadow": "off",
   },
 };
