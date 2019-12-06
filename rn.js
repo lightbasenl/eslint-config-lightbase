@@ -2,8 +2,8 @@ module.exports = {
   extends: ["@react-native-community", "plugin:prettier/recommended"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
-    },
+      jsx: true
+    }
   },
   overrides: [
     {
@@ -12,6 +12,7 @@ module.exports = {
         ...require("./lib/rules"),
         "react-native/no-inline-styles": "off",
         curly: "warn",
+        "@typescript-eslint/prefer-optional-chain": "warn",
         "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/explicit-member-accessibility": "off",
         "@typescript-eslint/indent": "off",
@@ -24,11 +25,11 @@ module.exports = {
             vars: "all",
             args: "after-used",
             argsIgnorePattern: "^_",
-            ignoreRestSiblings: false,
-          },
-        ],
-      },
-    },
+            ignoreRestSiblings: false
+          }
+        ]
+      }
+    }
   ],
   rules: {
     "default-case": ["warn", { commentPattern: "^no default$" }],
@@ -37,10 +38,13 @@ module.exports = {
     "no-useless-return": "warn",
     "prefer-destructuring": "warn",
     "react/no-unescaped-entities": "off",
-    "react/jsx-curly-brace-presence": ["error", { props: "never", children: "never" }],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { props: "never", children: "never" }
+    ],
     "react/no-array-index-key": "warn",
     "react/no-unused-state": "error",
     "object-shorthand": ["warn", "always"],
-    "no-catch-shadow": "off",
-  },
+    "no-catch-shadow": "off"
+  }
 };
