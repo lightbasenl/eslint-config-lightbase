@@ -36,7 +36,6 @@ module.exports = {
     "no-nested-ternary": "warn",
     "no-unneeded-ternary": "warn",
     "no-useless-return": "warn",
-    "prefer-destructuring": "warn",
     "react/no-unescaped-entities": "off",
     "react/jsx-curly-brace-presence": [
       "error",
