@@ -9,6 +9,11 @@ module.exports = {
       jsx: true
     }
   },
+  "import/resolver": {
+    node: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"]
+    }
+  },
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
