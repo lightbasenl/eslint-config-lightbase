@@ -9,9 +9,11 @@ module.exports = {
       jsx: true
     }
   },
-  "import/resolver": {
-    node: {
-      extensions: [".js", ".jsx", ".ts", ".tsx"]
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   overrides: [
