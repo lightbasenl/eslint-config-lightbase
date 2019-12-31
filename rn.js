@@ -1,19 +1,18 @@
 module.exports = {
-  extends: [
-    "@react-native-community",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:prettier/recommended"
-  ],
+  extends: ["@react-native-community", "plugin:prettier/recommended"],
+  plugins: ["import"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
     }
   },
   settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
+      typescript: {
+        alwaysTryTypes: true // always try to resolve types under `<roo/>@types` directory even it doesn't contain any source code, like `@types/unist`
       }
     }
   },
@@ -56,6 +55,8 @@ module.exports = {
     "react/no-array-index-key": "warn",
     "react/no-unused-state": "error",
     "object-shorthand": ["warn", "always"],
-    "no-catch-shadow": "off"
+    "no-catch-shadow": "off",
+    "import/no-unresolved": "error",
+    "import/no-duplicates": "warn"
   }
 };
