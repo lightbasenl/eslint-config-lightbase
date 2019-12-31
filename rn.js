@@ -2,7 +2,8 @@ module.exports = {
   extends: [
     "@react-native-community",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:prettier/recommended"
   ],
   parserOptions: {
     ecmaFeatures: {
