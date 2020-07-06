@@ -4,18 +4,18 @@ module.exports = {
   plugins: ["@typescript-eslint", "import"],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   settings: {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
       typescript: {
-        alwaysTryTypes: true // always try to resolve types under `<roo/>@types` directory even it doesn't contain any source code, like `@types/unist`
-      }
-    }
+        alwaysTryTypes: true, // always try to resolve types under `<roo/>@types` directory even it doesn't contain any source code, like `@types/unist`
+      },
+    },
   },
   overrides: [
     {
@@ -37,13 +37,17 @@ module.exports = {
             vars: "all",
             args: "after-used",
             argsIgnorePattern: "^_",
-            ignoreRestSiblings: true
-          }
-        ]
-      }
-    }
+            ignoreRestSiblings: true,
+          },
+        ],
+      },
+    },
   ],
   rules: {
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      { enableDangerousAutofixThisMayCauseInfiniteLoops: true },
+    ],
     "default-case": ["warn", { commentPattern: "^no default$" }],
     "no-nested-ternary": "warn",
     "no-unneeded-ternary": "warn",
@@ -51,13 +55,13 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "react/jsx-curly-brace-presence": [
       "error",
-      { props: "never", children: "never" }
+      { props: "never", children: "never" },
     ],
     "react/no-array-index-key": "warn",
     "react/no-unused-state": "error",
     "object-shorthand": ["warn", "always"],
     "no-catch-shadow": "off",
     "import/no-unresolved": "error",
-    "import/no-duplicates": "warn"
-  }
+    "import/no-duplicates": "warn",
+  },
 };
