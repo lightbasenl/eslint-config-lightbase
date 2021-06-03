@@ -1,6 +1,6 @@
 {
   "name": "@lightbase/eslint-config-lightbase",
-  "version": "2.13.1",
+  "version": "2.15.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
