@@ -40,14 +40,23 @@ module.exports = {
             ignoreRestSiblings: true,
           },
         ],
+        
       },
     },
   ],
   rules: {
-    "react-hooks/exhaustive-deps": [
-      "warn",
-      { enableDangerousAutofixThisMayCauseInfiniteLoops: true },
+    'react-hooks/exhaustive-deps': [
+      'warn',
+      {
+        enableDangerousAutofixThisMayCauseInfiniteLoops: true,
+        additionalHooks: '(useAnimatedStyle|useAnimatedProps|useDerivedValue|useAnimatedGestureHandler)',
+      },
     ],
+    'react/react-in-jsx-scope': 0,
+    'no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': 0,
+    '@typescript-eslint/no-explicit-any': [0],
+
     "default-case": ["warn", { commentPattern: "^no default$" }],
     "no-nested-ternary": "warn",
     "no-unneeded-ternary": "warn",
